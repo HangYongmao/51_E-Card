@@ -36,6 +36,10 @@ sbit Key_Pause = P3 ^ 4;    // 播放/暂停
 // 蜂鸣器
 sbit BeePIO    = P3 ^ 6;
 
+// 数码管
+sbit SEGSelect = P3 ^ 7;    // 位选
+sfr  SEGPort   = 0xA0;      // 数码管端口 P2
+
 // 延时 z ms
 void delay_ms(uint z);
 

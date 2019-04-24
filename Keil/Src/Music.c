@@ -1,7 +1,7 @@
 #include "Music.h"
 #include "MusicOpern.h"
 
-uchar m, n, i;
+uchar music_m, music_n, music_i;
 
 void delay(uchar p)
 {
@@ -30,39 +30,39 @@ void InitMusic()
 void T0_int() interrupt 1
 {
 	BeePIO = !BeePIO;
-	TH0 = T[m][0]; 
-	TL0 = T[m][1];
+	TH0 = T[music_m][0]; 
+	TL0 = T[music_m][1];
 }
 
 // ≤•∑≈“Ù¿÷
 void PlayMusic(uchar music[][2])
 {
-    m = music[i][0];
-    n = music[i][1];
-    if (m == 0x00)
+    music_m = music[music_i][0];
+    music_n = music[music_i][1];
+    if (music_m == 0x00)
     {
         TR0 = 0;
-        delay(n);
-        i++;
+        delay(music_n);
+        music_i++;
     }
-    else if (m == 0xFF)
+    else if (music_m == 0xFF)
     {
         TR0 = 0;
         delay(30);
-        i = 0;
+        music_i = 0;
     }
-    else if (m == music[i + 1][0])
+    else if (music_m == music[music_i + 1][0])
     {
         TR0 = 1;
-        delay(n);
+        delay(music_n);
         TR0 = 0;
         pause();
-        i++;
+        music_i++;
     }
     else
     {
         TR0 = 1;
-        delay(n);
-        i++;
+        delay(music_n);
+        music_i++;
     }
 }

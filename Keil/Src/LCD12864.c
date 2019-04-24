@@ -17,7 +17,7 @@ void LCD_Init()
 	LCD_CS = 1;
 	Write_char(0, 0x30);  // 8 位介面，基本指令集
 	Write_char(0, 0x0c);  // 显示打开，光标关，反白关
-	Write_char(0, 0x01);  // 清屏，将DDRAM的地址计数器归零  
+	//Write_char(0, 0x01);  // 清屏，将DDRAM的地址计数器归零  
 }
 
 // 写指令或数据

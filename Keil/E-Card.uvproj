@@ -443,6 +443,21 @@
             </File>
           </Files>
         </Group>
+        <Group>
+          <GroupName>Digitron</GroupName>
+          <Files>
+            <File>
+              <FileName>Digitron.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Src\Digitron.c</FilePath>
+            </File>
+            <File>
+              <FileName>Digitron.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\Digitron.h</FilePath>
+            </File>
+          </Files>
+        </Group>
       </Groups>
     </Target>
   </Targets>
