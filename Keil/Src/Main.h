@@ -15,11 +15,12 @@ enum KEYVALUE {
 };
 
 enum ViewPage {
-    ApplePage,  // 0-显示苹果
-    RunPage,    // 1-
-    GirlPage,   // 2-显示女孩
-    BikePage,   // 3-显示自行车
-    NoPage,     // 4-无显示
+    BriPage,        // 0-生日快乐
+    DuanQiaoPage,   // 1-断桥残雪
+    JZhouPage,      // 2-
+    MoLiHuaPage,    // 3-茉莉花
+    NewYearPage,    // 4-茉莉花
+    NoPage,         // 5-无显示
 };
 
 // LCD12864接口
